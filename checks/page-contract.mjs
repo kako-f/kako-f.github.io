@@ -19,3 +19,14 @@ const css = await readFile(new URL('../src/styles.css', import.meta.url), 'utf8'
 for (const marker of [':root', '.dark', '@media', ':focus-visible']) {
   assert.ok(css.includes(marker), `missing ${marker}`)
 }
+
+const workflow = await readFile(new URL('../.github/workflows/deploy.yml', import.meta.url), 'utf8')
+
+for (const marker of [
+  'actions/configure-pages@v5',
+  'actions/upload-pages-artifact@v4',
+  'actions/deploy-pages@v4',
+  'npm run build',
+]) {
+  assert.ok(workflow.includes(marker), `missing ${marker}`)
+}
