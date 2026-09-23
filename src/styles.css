@@ -90,7 +90,7 @@ nav a:hover, .monogram:hover, .theme-toggle:hover { color: var(--ink); }
 
 .section { border-bottom: 1px solid var(--line); padding: 6.5rem 0; scroll-margin-top: 1.5rem; }
 
-.hero { padding-block: clamp(7rem, 16vw, 12rem); }
+.hero { padding-block: clamp(7rem, 16vw, 2rem); }
 
 .eyebrow, .section-label, .index, .details, .roles, .project-status { color: var(--muted); margin: 0; }
 
@@ -118,7 +118,7 @@ h3 { font-size: 1.35rem; line-height: 1.08; margin-bottom: 0.7rem; }
 .split { display: grid; gap: 2rem; grid-template-columns: 10rem minmax(0, 1fr); }
 .section-label { padding-top: 0.45rem; }
 
-.expertise-grid { display: grid; gap: 1px; grid-template-columns: repeat(3, 1fr); background: var(--line); border: 1px solid var(--line); }
+.expertise-grid { display: grid; gap: 1px; grid-template-columns: repeat(4, 1fr); background: var(--line); border: 1px solid var(--line); }
 .expertise-card { background: var(--paper); min-height: 14rem; padding: 1.5rem; }
 .expertise-card p:last-child { color: var(--muted); line-height: 1.55; margin-bottom: 0; }
 .index { margin-bottom: 3rem; }
@@ -129,7 +129,7 @@ h3 { font-size: 1.35rem; line-height: 1.08; margin-bottom: 0.7rem; }
 .project-card div > p { color: var(--muted); line-height: 1.5; }
 .project-card a, .project-status { align-self: center; justify-self: end; }
 
-.toolkit-grid { display: grid; gap: 2rem; grid-template-columns: repeat(3, 1fr); }
+.toolkit-grid { display: grid; gap: 2rem; grid-template-columns: repeat(4, 1fr); }
 .toolkit-grid h3 { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; }
 .toolkit-grid ul { border-top: 1px solid var(--line); list-style: none; margin: 0; padding: 0; }
 .toolkit-grid li { border-bottom: 1px solid var(--line); padding: 0.7rem 0; }

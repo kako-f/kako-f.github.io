@@ -1,21 +1,21 @@
-import { useState } from 'react'
-import { portfolio } from './data/portfolio'
+import { useState } from "react";
+import { portfolio } from "./data/portfolio";
 
 const navItems = [
-  ['About', 'about'],
-  ['Expertise', 'expertise'],
-  ['Projects', 'projects'],
-  ['Research', 'research'],
-  ['Contact', 'contact'],
-] as const
+  ["About", "about"],
+  ["Expertise", "expertise"],
+  ["Projects", "projects"],
+  ["Research", "research"],
+  ["Contact", "contact"],
+] as const;
 
-const externalLabel = (label: string) => `${label} (opens in a new tab)`
+const externalLabel = (label: string) => `${label} (opens in a new tab)`;
 
 export default function App() {
-  const [dark, setDark] = useState(false)
+  const [dark, setDark] = useState(false);
 
   return (
-    <div className={dark ? 'site dark' : 'site'}>
+    <div className={dark ? "site dark" : "site"}>
       <header className="site-header">
         <a className="monogram" href="#hero" aria-label="Camilo Fuentes Beals, back to top">
           CFB
@@ -27,33 +27,46 @@ export default function App() {
             </a>
           ))}
         </nav>
-        <button
-          className="theme-toggle"
-          type="button"
-          aria-pressed={dark}
-          onClick={() => setDark((value) => !value)}
-        >
-          {dark ? 'Light mode' : 'Dark mode'}
+        <button className="theme-toggle" type="button" aria-pressed={dark} onClick={() => setDark((value) => !value)}>
+          {dark ? "Light mode" : "Dark mode"}
         </button>
       </header>
 
       <main>
-        <section className="hero section" id="hero" aria-labelledby="hero-title">
+        <section
+          className="hero section"
+          id="hero"
+          aria-labelledby="hero-title"
+        >
           <p className="eyebrow">Scientist · Engineer</p>
           <h1 id="hero-title">{portfolio.name}</h1>
-          <p className="roles">{portfolio.roles.join(' · ')}</p>
+          <p className="roles">{portfolio.roles.join(" · ")}</p>
           <p className="hero-copy">{portfolio.intro}</p>
           <div className="link-row" aria-label="Professional links">
-            <a href={portfolio.links.github} target="_blank" rel="noreferrer" aria-label={externalLabel('GitHub')}>
+            <a
+              href={portfolio.links.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={externalLabel("GitHub")}
+            >
               GitHub <span aria-hidden="true">↗</span>
             </a>
-            <a href={portfolio.links.scholar} target="_blank" rel="noreferrer" aria-label={externalLabel('Google Scholar')}>
+            <a
+              href={portfolio.links.scholar}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={externalLabel("Google Scholar")}
+            >
               Google Scholar <span aria-hidden="true">↗</span>
             </a>
           </div>
         </section>
 
-        <section className="section split" id="about" aria-labelledby="about-title">
+        <section
+          className="section split"
+          id="about"
+          aria-labelledby="about-title"
+        >
           <p className="section-label">01</p>
           <div>
             <h2 id="about-title">About</h2>
@@ -61,7 +74,11 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section split" id="expertise" aria-labelledby="expertise-title">
+        <section
+          className="section split"
+          id="expertise"
+          aria-labelledby="expertise-title"
+        >
           <p className="section-label">02</p>
           <div>
             <h2 id="expertise-title">Areas of expertise</h2>
@@ -77,7 +94,11 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section split" id="projects" aria-labelledby="projects-title">
+        <section
+          className="section split"
+          id="projects"
+          aria-labelledby="projects-title"
+        >
           <p className="section-label">03</p>
           <div>
             <h2 id="projects-title">Selected projects</h2>
@@ -90,7 +111,12 @@ export default function App() {
                   </div>
                   <p className="details">{project.details}</p>
                   {project.href ? (
-                    <a href={project.href} target="_blank" rel="noreferrer" aria-label={externalLabel(`View ${project.name}`)}>
+                    <a
+                      href={project.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={externalLabel(`View ${project.name}`)}
+                    >
                       View work <span aria-hidden="true">↗</span>
                     </a>
                   ) : (
@@ -102,18 +128,35 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section split" id="research" aria-labelledby="research-title">
+        <section
+          className="section split"
+          id="research"
+          aria-labelledby="research-title"
+        >
           <p className="section-label">04</p>
           <div>
             <h2 id="research-title">Research and teaching</h2>
             <p className="lead">{portfolio.research}</p>
-            <a className="text-link" href={portfolio.links.scholar} target="_blank" rel="noreferrer" aria-label={externalLabel('Explore publications on Google Scholar')}>
-              Explore publications on Google Scholar <span aria-hidden="true">↗</span>
+            <a
+              className="text-link"
+              href={portfolio.links.scholar}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={externalLabel(
+                "Explore publications on Google Scholar",
+              )}
+            >
+              Explore publications on Google Scholar{" "}
+              <span aria-hidden="true">↗</span>
             </a>
           </div>
         </section>
 
-        <section className="section split" id="toolkit" aria-labelledby="toolkit-title">
+        <section
+          className="section split"
+          id="toolkit"
+          aria-labelledby="toolkit-title"
+        >
           <p className="section-label">05</p>
           <div>
             <h2 id="toolkit-title">Technical toolkit</h2>
@@ -132,15 +175,43 @@ export default function App() {
           </div>
         </section>
 
-        <section className="section split contact" id="contact" aria-labelledby="contact-title">
+        <section
+          className="section split contact"
+          id="contact"
+          aria-labelledby="contact-title"
+        >
           <p className="section-label">06</p>
           <div>
             <h2 id="contact-title">Let&apos;s connect</h2>
-            <p className="lead">For research collaborations, technical projects, and conversations at the intersection of science and software.</p>
+            <p className="lead">
+              For research collaborations, technical projects, and conversations
+              at the intersection of science and software.
+            </p>
             <div className="contact-links">
-              <a href={portfolio.links.website} target="_blank" rel="noreferrer" aria-label={externalLabel('Website')}>Website <span aria-hidden="true">↗</span></a>
-              <a href={portfolio.links.github} target="_blank" rel="noreferrer" aria-label={externalLabel('GitHub')}>GitHub <span aria-hidden="true">↗</span></a>
-              <a href={portfolio.links.scholar} target="_blank" rel="noreferrer" aria-label={externalLabel('Google Scholar')}>Google Scholar <span aria-hidden="true">↗</span></a>
+              <a
+                href={portfolio.links.website}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={externalLabel("Website")}
+              >
+                Website <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href={portfolio.links.github}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={externalLabel("GitHub")}
+              >
+                GitHub <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href={portfolio.links.scholar}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={externalLabel("Google Scholar")}
+              >
+                Google Scholar <span aria-hidden="true">↗</span>
+              </a>
             </div>
           </div>
         </section>
@@ -151,5 +222,5 @@ export default function App() {
         <span>Computational biology · data · software</span>
       </footer>
     </div>
-  )
+  );
 }

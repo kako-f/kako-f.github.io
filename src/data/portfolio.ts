@@ -7,15 +7,16 @@ export type Project = {
 
 export const portfolio = {
   name: 'Camilo Fuentes Beals',
-  roles: ['PhD in Science', 'Bioinformatics', 'Data Science', 'Software Engineering'],
+  roles: ['PhD in Science', 'Bioinformatics', 'Data Science','Data Engineer', 'Software Engineering', 'AI/ML'],
   intro:
-    'I build computational tools and data-driven systems, with a background in genomics and transposable elements.',
+    'I build computational tools and data-driven systems, with a background in Bioinformatics, Genomics and Software Development.',
   about:
     'My work connects biological research, machine learning, data engineering, and software development. I enjoy turning complex questions into dependable tools, clear analyses, and useful systems.',
   expertise: [
     ['Computational biology', 'Genomics, transposable elements, and reproducible research.'],
     ['Data systems', 'Data engineering, machine learning, and analytical products.'],
     ['Software engineering', 'Research-grade tools and production web applications.'],
+    ['IA/ML', 'Application, Development and model analysis.'],
   ],
   projects: [
     {
@@ -44,9 +45,9 @@ export const portfolio = {
   research:
     'My research spans genomics and transposable elements, using computational methods to ask biological questions. I also teach and mentor around data literacy, reproducibility, and scientific software.',
   toolkit: {
-    research: ['Python', 'R', 'Bioinformatics', 'Reproducible research'],
-    data: ['Machine learning', 'Data engineering', 'PostgreSQL'],
-    software: ['TypeScript', 'React', 'Django', 'C++'],
+    research: ['Python', 'R', 'Bioinformatics','Genomics', 'Reproducible research'],
+    data: ['Machine learning', 'Data engineering', 'PostgreSQL','SQL'],
+    software: ['C++','Java', 'React', 'Django','TypeScript' ],
   },
   links: {
     github: 'https://github.com/kako-f',
